@@ -1,0 +1,28 @@
+server:
+  port: 8060
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: api-gateway
+  config:
+    import: "optional:configserver:http://localhost:8088"
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        #- id: share-order-service
+        #  uri: lb://share-order-service
+        #  predicates:
+        #    - Path=/share-order/**
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0

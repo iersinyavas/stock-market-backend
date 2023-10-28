@@ -1,0 +1,15 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native  #git
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri:
+
+
