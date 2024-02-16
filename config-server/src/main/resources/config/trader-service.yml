@@ -1,10 +1,10 @@
 server:
-  port: 8081
+  port: 8200
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 #  instance:
-#    instance-id: ${spring.application.name}:${random.value}    random port atar
+#    instance-id: ${spring.application.name}:${random.value}
 
